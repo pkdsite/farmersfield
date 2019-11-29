@@ -1138,3 +1138,6 @@ margin-right: 8px;
 .navbar-padding-top {
 	padding-top: 5px;
 }
+.download-section {
+	background: url(../images/availableCity.png);
+}
