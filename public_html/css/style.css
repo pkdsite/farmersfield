@@ -1118,6 +1118,9 @@ margin-right: 8px;
 	font-weight: 700;
 	margin-bottom: 30px;
 }
+.padding-left {
+	padding-left: 8%;
+}
 .padding-right {
 	padding-right: 4px;
 }

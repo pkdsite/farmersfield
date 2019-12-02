@@ -15,9 +15,9 @@ $(window).ready(function() {
 	'use strict';
 	$.vegas('slideshow', {
 	  backgrounds:[
-		{ src:'images/bg-slider/bg-11.jpg', fade:400 },
-		{ src:'images/pulses1.jpg', fade:1000 },
-		{ src:'images/curly-flower.jpg', fade:1000 }
+		{ src:'images/bg-11.jpg', fade:1000},
+		{ src:'images/pulses1.jpg', fade:1000},
+		{ src:'images/curly-flower.jpg', fade:1000}
 	  ]
 	})();
 });
@@ -72,70 +72,70 @@ $(document).ready(function() {
 /* ----------------------------- 
 Card Style Script
 ----------------------------- */					
-$(document).ready(function() {
-	'use strict';
-	var $el 			= $( '#card-ul' ),
-		sectionFeature  = $('#section-feature'),
-		baraja 			= $el.baraja();
+// $(document).ready(function() {
+// 	'use strict';
+// 	var $el 			= $( '#card-ul' ),
+// 		sectionFeature  = $('#section-feature'),
+// 		baraja 			= $el.baraja();
 	
-		if ( $(window).width() > 480) {
-			sectionFeature.appear(function(){
-				baraja.fan({
-					speed : 1500,
-					easing : 'ease-out',
-					range : 100,
-					direction : 'right',
-					origin : { x : 50, y : 200 },
-					center : true
-				});
-			});
-			$('#feature-expand').click(function() {
-				baraja.fan({
-					speed : 500,
-					easing : 'ease-out',
-					range : 100,
-					direction : 'right',
-					origin : { x : 50, y : 200 },
-					center : true
-				});
-			}); 
-		} else {
-			sectionFeature.appear(function(){
-				baraja.fan({
-					speed : 1500,
-					easing : 'ease-out',
-					range : 80,
-					direction : 'left',
-					origin : { x : 200, y : 50 },
-					center : true
-				});
-			});
-			$('#feature-expand').click(function() {
-				baraja.fan({
-					speed : 500,
-					easing : 'ease-out',
-					range : 80,
-					direction : 'left',
-					origin : { x : 200, y : 50 },
-					center : true
-				});
-			});
-		}
+// 		if ( $(window).width() > 480) {
+// 			sectionFeature.appear(function(){
+// 				baraja.fan({
+// 					speed : 1500,
+// 					easing : 'ease-out',
+// 					range : 100,
+// 					direction : 'right',
+// 					origin : { x : 50, y : 200 },
+// 					center : true
+// 				});
+// 			});
+// 			$('#feature-expand').click(function() {
+// 				baraja.fan({
+// 					speed : 500,
+// 					easing : 'ease-out',
+// 					range : 100,
+// 					direction : 'right',
+// 					origin : { x : 50, y : 200 },
+// 					center : true
+// 				});
+// 			}); 
+// 		} else {
+// 			sectionFeature.appear(function(){
+// 				baraja.fan({
+// 					speed : 1500,
+// 					easing : 'ease-out',
+// 					range : 80,
+// 					direction : 'left',
+// 					origin : { x : 200, y : 50 },
+// 					center : true
+// 				});
+// 			});
+// 			$('#feature-expand').click(function() {
+// 				baraja.fan({
+// 					speed : 500,
+// 					easing : 'ease-out',
+// 					range : 80,
+// 					direction : 'left',
+// 					origin : { x : 200, y : 50 },
+// 					center : true
+// 				});
+// 			});
+// 		}
 		
-	// Feature navigation
-	$('#feature-prev').on( 'click', function( event ) {
-		baraja.previous();
-	});
+// 	// Feature navigation
+// 	$('#feature-prev').on( 'click', function( event ) {
+// 		baraja.previous();
+// 	});
 
-	$('#feature-next').on( 'click', function( event ) {
-		baraja.next();
-	});
+// 	$('#feature-next').on( 'click', function( event ) {
+// 		baraja.next();
+// 	});
 	
-	// close Features
-	$('#feature-close').on( 'click', function( event ) {
-		baraja.close();
-	});	
-});
+// 	// close Features
+// 	$('#feature-close').on( 'click', function( event ) {
+// 		baraja.close();
+// 	});	
+// });
 
 /* ----------------------------- 
 Fitvids init
@@ -241,6 +241,7 @@ $(document).ready(function() {
 	$(window).bind('scroll', function(e) {
 		var scrollPos = $(window).scrollTop();
 		scrollPos > 220 ? $('.sticky-section').addClass('nav-bg') : $('.sticky-section').removeClass('nav-bg');
+		e.preventDefault();
 	});
 });				
 				
